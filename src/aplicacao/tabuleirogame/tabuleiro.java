@@ -28,9 +28,11 @@ public class tabuleiro {
         this.colunas = colunas;
     }
 
-    @Override
-    public String toString() {
-        return fileiras + ", " + colunas;
+    public peça peça (int fileiras, int colunas){
+        return peças[fileiras][colunas];
+    }
+    public peça peça (posicao posicao){
+        return peças [posicao.getFileira()][posicao.getColuna()];
     }
 
     
