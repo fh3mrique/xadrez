@@ -27,7 +27,7 @@ public class PartidaDeXadrez {
 
     private void ConfiguracaoIniacial (){
         tabuleiro.colocarPeça(new Torre(tabuleiro, cor.WHITE), new posicao(2, 1));
-        tabuleiro.colocarPeça(new Rei(tabuleiro, cor.BLACK), new posicao(0, 4));
+        tabuleiro.colocarPeça(new Rei(tabuleiro, cor.BLACK), new posicao(7, 2));
         tabuleiro.colocarPeça(new Rei(tabuleiro, cor.WHITE), new posicao(7, 4));
     }
     
