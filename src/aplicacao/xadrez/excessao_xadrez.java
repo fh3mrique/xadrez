@@ -1,6 +1,8 @@
 package aplicacao.xadrez;
 
-public class excessao_xadrez extends RuntimeException{
+import aplicacao.tabuleirogame.excessao_tabuleiro;
+
+public class excessao_xadrez extends excessao_tabuleiro{
 
     private static final long serialVersionUID = 1L;
     public excessao_xadrez (String msg){

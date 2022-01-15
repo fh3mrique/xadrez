@@ -44,6 +44,22 @@ public class tabuleiro {
         peças[posicao.getFileira()][posicao.getColuna()] = peça;
         peça.posicao= posicao;
     }
+    
+    public peça removerPeça (posicao posicao){
+        if (!ExistenciaDePosição(posicao)){
+            throw new excessao_tabuleiro("Posição não existe no tabuleiro");
+        }
+        if (peça(posicao)== null){
+            
+            return null;
+        }
+        peça aux = peça(posicao);
+        aux.posicao = null;
+        peças [posicao.getFileira()][posicao.getColuna()] = null;
+        return aux;
+
+
+    }
     private boolean ExistenciaDePosição(int fileira, int coluna) {
         return fileira >= 0 && fileira < fileiras && coluna >=0 && coluna < colunas;
     }
