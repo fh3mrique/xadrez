@@ -24,11 +24,16 @@ public class PartidaDeXadrez {
         }
         return mat;
     }
+       
+    private void colocarNovaPeça(char coluna, int fileira, peçaDeXandrez peça) {
 
+        tabuleiro.colocarPeça(peça, new posiçaoXadrez(coluna, fileira).convesãoParaPosicao());
+
+    }
     private void ConfiguracaoIniacial (){
-        tabuleiro.colocarPeça(new Torre(tabuleiro, cor.WHITE), new posicao(2, 1));
-        tabuleiro.colocarPeça(new Rei(tabuleiro, cor.BLACK), new posicao(7, 2));
-        tabuleiro.colocarPeça(new Rei(tabuleiro, cor.WHITE), new posicao(7, 4));
+        colocarNovaPeça('b', 6, new Torre(tabuleiro, cor.WHITE));
+       colocarNovaPeça('e', 8, new Rei (tabuleiro, cor.BLACK));
+        colocarNovaPeça('e', 1 , new Rei(tabuleiro, cor.WHITE));
     }
     
 }
