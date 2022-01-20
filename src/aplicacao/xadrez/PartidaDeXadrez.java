@@ -47,6 +47,9 @@ public class PartidaDeXadrez {
         if (!tabuleiro.existeEssaPeça(posicao)){
             throw new excessao_xadrez("Não há peça na posição de origem");
         }
+        if (!tabuleiro.peça(posicao).existeAlgumMovPossivel()){
+            throw new excessao_xadrez("Não existe movimentos possiveis para essa peça escolhida");
+        }
     }
        
     private void colocarNovaPeça(char coluna, int fileira, peçaDeXandrez peça) {
